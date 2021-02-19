@@ -1,0 +1,12 @@
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\bin\Debug\OdeToFood.Data.dll
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\bin\Debug\OdeToFood.Data.pdb
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\obj\Debug\OdeToFood.Data.csproj.CoreCompileInputs.cache
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\obj\Debug\OdeToFood.Data.dll
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\obj\Debug\OdeToFood.Data.pdb
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\bin\Debug\OdeToFood.Data.dll.config
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\bin\Debug\EntityFramework.dll
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\bin\Debug\EntityFramework.xml
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\obj\Debug\OdeToFood.Data.csprojAssemblyReference.cache
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\obj\Debug\OdeToFood.Data.csproj.CopyComplete
