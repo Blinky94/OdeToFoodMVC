@@ -1,0 +1,12 @@
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\bin\Release\OdeToFood.Data.dll.config
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\bin\Release\OdeToFood.Data.dll
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\bin\Release\OdeToFood.Data.pdb
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\bin\Release\EntityFramework.dll
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\bin\Release\EntityFramework.SqlServer.dll
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\bin\Release\EntityFramework.xml
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\bin\Release\EntityFramework.SqlServer.xml
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\obj\Release\OdeToFood.Data.csprojAssemblyReference.cache
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\obj\Release\OdeToFood.Data.csproj.CoreCompileInputs.cache
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\obj\Release\OdeToFood.Data.csproj.CopyComplete
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\obj\Release\OdeToFood.Data.dll
+D:\PluralSight\MVC\OdeToFood\OdeToFood.Data\obj\Release\OdeToFood.Data.pdb

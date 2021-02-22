@@ -1,0 +1,148 @@
+﻿@model IEnumerable<OdeToFood.Data.Models.Student>
+@using OdeToFood.Data.Models;
+
+@{
+    ViewBag.Title = "Bac a sable";
+}
+
+<h2>Bac a sable</h2>
+
+<h1>Built-In HTML.Helpers</h1>
+
+@using (@Html.BeginForm())
+{
+    <div>
+        @functions
+                        {
+            string getStudentName(string firstName, string lastName)
+            {
+                if (firstName == "Sabrina" && lastName == "CAZE-SULFOURT")
+                {
+                    return "danger";
+                }
+                return "success";
+            }
+
+            string getGender(int id)
+            {
+                return @Model.Where(s => s.StudentId == id).Select(s => s.Gender).ToString();
+            }
+        }
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Is Active</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in Model)
+                {
+                    <tr>
+                        <th scope="row" class=@getStudentName(student.FirstName, student.LastName)>@student.StudentId</th>
+                        <td class=@getStudentName(student.FirstName, student.LastName)>@student.FirstName</td>
+                        <td class=@getStudentName(student.FirstName, student.LastName)>@student.LastName</td>
+                        <td class=@getStudentName(student.FirstName, student.LastName)>@student.Gender</td>
+                        <td class=@getStudentName(student.FirstName, student.LastName)>@student.Age</td>
+                        <td class=@getStudentName(student.FirstName, student.LastName)>@student.Description</td>
+                        <td class=@getStudentName(student.FirstName, student.LastName)>@Html.CheckBoxFor(m => student.IsActive)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <h3>Text Box - TextBoxFor</h3>
+        @Html.TextBoxFor(t => Model.FirstOrDefault().LastName)
+        <br />
+        <h3>Text Area - TextAreaFor</h3>
+        @Html.TextAreaFor(t => Model.FirstOrDefault().Description, new { @class = "form-control; rows:10", style = "font-size = medium;  width:1200px" })
+        <br />
+        <h3>Checkbox - CheckBoxFor</h3>
+
+        @foreach (var student in Model)
+        {
+            <h5>@Html.CheckBoxFor(s => student.IsActive) @student.FirstName @student.LastName </h5>
+        }
+
+        <br />
+        <h3>RadioButton - RadioButtonFor</h3>
+
+        <span>@Model.FirstOrDefault().FirstName @Model.FirstOrDefault().LastName</span>
+        <div>
+            @Html.RadioButtonFor(s => @Model.FirstOrDefault().Gender, Gender.male) @Html.Label(Gender.male.ToString())
+        </div>
+        <div>
+            @Html.RadioButtonFor(s => @Model.FirstOrDefault().Gender, Gender.female) @Html.Label(Gender.female.ToString())
+        </div>
+        <div>
+            @Html.RadioButtonFor(s => @Model.FirstOrDefault().Gender, Gender.nonBinary) @Html.Label(Gender.nonBinary.ToString())
+        </div>
+        <div>
+            @Html.RadioButtonFor(s => @Model.FirstOrDefault().Gender, Gender.unknown) @Html.Label(Gender.unknown.ToString())
+        </div>
+
+        <br />
+        <h3>DropDownList - DropDownListFor</h3>
+
+        @Html.DropDownListFor(s => Model.FirstOrDefault().Gender, new SelectList(Enum.GetValues(typeof(Gender))))
+
+        <br />
+        <h3>Hidden Field - HiddenFor</h3>
+
+        @Html.HiddenFor(s => Model.FirstOrDefault().StudentId)
+        <img src="/Images/HiddenFor_image.PNG" />
+
+        <br />
+        <h3>Password - PasswordFor</h3>
+
+        @Html.PasswordFor(p => p.FirstOrDefault().Password)
+
+        <br />
+        <h3>Display - DisplayFor</h3>
+
+        @Html.DisplayFor(s => s.FirstOrDefault().FirstName)
+    </div>
+
+    <br />
+    <h3>Label - LabelFor</h3>
+
+    <div>
+        @Html.LabelFor(s => s.FirstOrDefault().FirstName)
+    </div>
+
+    <br />
+    <h3>Editor - EditorFor</h3>
+
+    <div>
+        @Html.EditorFor(s => s.FirstOrDefault().StudentId)
+        @Html.EditorFor(s => s.FirstOrDefault().FirstName)
+        @Html.EditorFor(s => s.FirstOrDefault().LastName)
+        @Html.EditorFor(s => s.FirstOrDefault().Age)
+        @Html.EditorFor(s => s.FirstOrDefault().Description)
+        @Html.EditorFor(s => s.FirstOrDefault().Gender)
+        @Html.EditorFor(s => s.FirstOrDefault().Password)
+    </div>
+
+    <br />
+    <h3>Validation Message - ValidateFor</h3>
+
+    <div>
+        @Html.EditorFor(m => m.FirstOrDefault().FirstName)
+        @Html.ValidationMessageFor(m => m.FirstOrDefault().FirstName, "", new { @class = "text-danger" })
+        <span class="text-danger">This name is required!</span>
+    </div>
+
+}
+
+<br />
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Create" class="btn btn-default" />
+    </div>
+</div>
+@Html.ActionLink("Come back to home", "Index", "Home")
+
